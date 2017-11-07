@@ -25,14 +25,7 @@
                 /images/** = anon
                 /scripts/** = anon
                 /stylesheets/** = anon
-                /telecom/** = anon
-                /callback/** = anon
-                /unicom/** = anon
-                /register/** = anon
-                /down/** = anon
-                /webadmin/** = roles[admin]
-                /webcommon/** = roles[common_user]
-                /** = user
+                /** = authc
             </value>
         </property>
     </bean>

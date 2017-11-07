@@ -2,20 +2,14 @@ package cn.longicorn.dzzs.web;
 
 import cn.longicorn.dzzs.shiro.ShiroUtils;
 import cn.longicorn.dzzs.util.RspData;
-import org.apache.http.protocol.ResponseDate;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.IncorrectCredentialsException;
-import org.apache.shiro.authc.LockedAccountException;
-import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import java.io.IOException;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Created by ywj on 2017/11/3.
@@ -31,7 +25,7 @@ public class LoginController {
 
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<?> login(String username, String password) {
+    public ResponseEntity<?> login(@RequestParam(value = "username") String username, @RequestParam(value = "password") String password) {
         try {
             Subject subject = ShiroUtils.getSubject();
             UsernamePasswordToken token = new UsernamePasswordToken(username, password);

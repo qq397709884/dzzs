@@ -1,0 +1,149 @@
+{
+  "menuList": [
+    {
+      "menuId": 1,
+      "parentId": 0,
+      "parentName": null,
+      "name": "系统管理",
+      "url": null,
+      "perms": null,
+      "type": 0,
+      "icon": "fa fa-cog",
+      "orderNum": 0,
+      "open": null,
+      "list": [
+        {
+          "menuId": 2,
+          "parentId": 1,
+          "parentName": null,
+          "name": "管理员管理",
+          "url": "modules/sys/user.html",
+          "perms": null,
+          "type": 1,
+          "icon": "fa fa-user",
+          "orderNum": 1,
+          "open": null,
+          "list": null
+        },
+        {
+          "menuId": 31,
+          "parentId": 1,
+          "parentName": null,
+          "name": "部门管理",
+          "url": "modules/sys/dept.html",
+          "perms": null,
+          "type": 1,
+          "icon": "fa fa-file-code-o",
+          "orderNum": 1,
+          "open": null,
+          "list": null
+        },
+        {
+          "menuId": 3,
+          "parentId": 1,
+          "parentName": null,
+          "name": "角色管理",
+          "url": "modules/sys/role.html",
+          "perms": null,
+          "type": 1,
+          "icon": "fa fa-user-secret",
+          "orderNum": 2,
+          "open": null,
+          "list": null
+        },
+        {
+          "menuId": 4,
+          "parentId": 1,
+          "parentName": null,
+          "name": "菜单管理",
+          "url": "modules/sys/menu.html",
+          "perms": null,
+          "type": 1,
+          "icon": "fa fa-th-list",
+          "orderNum": 3,
+          "open": null,
+          "list": null
+        },
+        {
+          "menuId": 5,
+          "parentId": 1,
+          "parentName": null,
+          "name": "SQL监控",
+          "url": "druid/sql.html",
+          "perms": null,
+          "type": 1,
+          "icon": "fa fa-bug",
+          "orderNum": 4,
+          "open": null,
+          "list": null
+        },
+        {
+          "menuId": 6,
+          "parentId": 1,
+          "parentName": null,
+          "name": "定时任务",
+          "url": "modules/job/schedule.html",
+          "perms": null,
+          "type": 1,
+          "icon": "fa fa-tasks",
+          "orderNum": 5,
+          "open": null,
+          "list": null
+        },
+        {
+          "menuId": 27,
+          "parentId": 1,
+          "parentName": null,
+          "name": "参数管理",
+          "url": "modules/sys/config.html",
+          "perms": "sys:config:list,sys:config:info,sys:config:save,sys:config:update,sys:config:delete",
+          "type": 1,
+          "icon": "fa fa-sun-o",
+          "orderNum": 6,
+          "open": null,
+          "list": null
+        },
+        {
+          "menuId": 30,
+          "parentId": 1,
+          "parentName": null,
+          "name": "文件上传",
+          "url": "modules/oss/oss.html",
+          "perms": "sys:oss:all",
+          "type": 1,
+          "icon": "fa fa-file-image-o",
+          "orderNum": 6,
+          "open": null,
+          "list": null
+        },
+        {
+          "menuId": 29,
+          "parentId": 1,
+          "parentName": null,
+          "name": "系统日志",
+          "url": "modules/sys/log.html",
+          "perms": "sys:log:list",
+          "type": 1,
+          "icon": "fa fa-file-text-o",
+          "orderNum": 7,
+          "open": null,
+          "list": null
+        },
+        {
+          "menuId": 28,
+          "parentId": 1,
+          "parentName": null,
+          "name": "代码生成器",
+          "url": "modules/gen/generator.html",
+          "perms": "sys:generator:list,sys:generator:code",
+          "type": 1,
+          "icon": "fa fa-rocket",
+          "orderNum": 8,
+          "open": null,
+          "list": null
+        }
+      ]
+    }
+  ],
+  "code": 0
+}

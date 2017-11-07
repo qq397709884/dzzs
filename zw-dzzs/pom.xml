@@ -12,7 +12,7 @@
     <name>ZW :: DZZS</name>
 
     <properties>
-        <shiro-version>1.2.5</shiro-version>
+        <shiro-version>1.4.0</shiro-version>
     </properties>
 
     <dependencies>
@@ -28,11 +28,11 @@
             <artifactId>tomcat-jdbc</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.zaxxer</groupId>
-            <artifactId>HikariCP</artifactId>
-            <version>2.4.7</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.zaxxer</groupId>-->
+            <!--<artifactId>HikariCP</artifactId>-->
+            <!--<version>2.4.7</version>-->
+        <!--</dependency>-->
 
         <!-- jdbc driver -->
         <dependency>
@@ -114,7 +114,7 @@
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
-            <version>1.2.2</version>
+            <version>1.3.1</version>
         </dependency>
 
         <dependency>
@@ -196,9 +196,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <configuration>
-                    <warName>sms</warName>
-                </configuration>
+                <!--<configuration>-->
+                    <!--<warName>sms</warName>-->
+                <!--</configuration>-->
             </plugin>
         </plugins>
 

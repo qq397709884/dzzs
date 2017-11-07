@@ -1,8 +1,8 @@
-<%@ include file="/WEB-INF/commons/taglibs.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html class="login-bg">
 <head>
-    <%@ include file="/WEB-INF/commons/meta.jsp"%>
+    <%@ include file="/WEB-INF/commons/meta.jsp" %>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>登录</title>
     <%@ include file="/WEB-INF/views/include/http-header.jsp" %>
@@ -15,8 +15,8 @@
     </div>
     <div class="login-box-body">
         <p class="login-box-msg">输入用户名和密码登录</p>
-        <div v-if="error" class="alert alert-danger alert-dismissible">
-            <h4 style="margin-bottom: 0px;"><i class="fa fa-exclamation-triangle" id="error"></i></h4>
+        <div id="error" class="alert alert-danger alert-dismissible" style="display: none">
+            <h4 style="margin-bottom: 0px;"><i class="fa fa-exclamation-triangle"></i></h4>
         </div>
 
         <div class="form-group has-feedback">
@@ -24,7 +24,7 @@
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-            <input class="form-control" type="password" name="password" placeholder="密码">
+            <input class="form-control" type="password" name="password" id="password" placeholder="密码">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
         <div class="row">
@@ -50,16 +50,20 @@
     var login = function () {
         var username = $("#username").val();
         var password = $("#password").val();
+        alert(password);
         $.ajax({
             type: "POST",
-            url: "sys/login",
+            url: ${ctx}+"/login",
+            contentType:"application/x-www-form-urlencoded",
             data: {"username": username, "password": password},
             dataType: "json",
             success: function (result) {
                 if (result.code == 0) {//登录成功
                     parent.location.href = '/';
                 } else {
-                    $("#error").text(result.msg);
+//                    $("#error").attr("display", "")
+//                            .text(result.msg);
+                    alert("登录失败" + result.data)
                 }
             }
         });
